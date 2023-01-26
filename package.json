@@ -17,10 +17,13 @@
   "dependencies": {
     "@sanity/client": "^2.0.1",
     "@sanity/image-url": "^0.140.19",
+    "file-loader": "^6.2.0",
     "next": "^10.0.1",
     "next-sanity": "^0.1.8",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-multi-carousel": "^2.8.2",
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
     "@sanity/cli": "^2.0.9",

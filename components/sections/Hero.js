@@ -21,6 +21,7 @@ function Hero(props) {
             )}
           </div>
           <div className="w-full h-64 md:w-1/2 lg:h-96">
+            SOMETHING HERE
             <img
               className="h-full w-full rounded-md object-cover max-w-lg mx-auto"
               src={urlFor(backgroundImage)

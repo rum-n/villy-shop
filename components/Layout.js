@@ -7,21 +7,18 @@ function Layout({ children }) {
   const handleMenu = () => setMenuOpen(!menuOpen);
   const handleOpen = () => setCartOpen(!cartOpen);
   return (
-    <div>
-      <header className="shadow">
-        <div className="container mx-auto px-6 py-3 ">
+    <div className="shadow-lg">
+      <header>
+        <div className="container mx-auto px-6 py-5 ">
           <div className="flex items-center justify-between  shadow-bottom	">
             <div className="hidden w-full text-black-600 md:flex md:items-center">
               <span className="mx-1 text-md">VIOLETA BOYADZHIEVA</span>
             </div>
-            {/* <div className="w-full text-gray-700 md:text-center text-2xl font-semibold">
-              Pulp Inc.
-            </div> */}
-            <div className="flex items-center justify-end w-full">
+            <div className="flex justify-end w-full">
               <nav
                 className={`${
                   menuOpen ? "" : "hidden"
-                } sm:flex sm:justify-center sm:items-center mt-4 `}
+                } sm:flex sm:justify-center sm:items-center`}
               >
                 <div className="flex flex-col sm:flex-row">
                   <Link href="/">
@@ -89,7 +86,7 @@ function Layout({ children }) {
       // This Cart doesn't really work… yet!
       <Cart cartOpen={cartOpen} handleOpen={handleOpen} />
       */}
-      <main className="my-8">{children}</main>
+      <main>{children}</main>
       <footer className="bg-gray-200">
         <div className="container mx-auto px-6 py-3 flex justify-between items-center">
           <a

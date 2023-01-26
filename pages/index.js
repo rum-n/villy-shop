@@ -2,6 +2,8 @@ import Error from "next/error";
 import { useRouter } from "next/router";
 import { getClient, usePreviewSubscription } from "../utils/sanity";
 import ProductsPage from "../components/ProductsPage";
+import LandingHero from "../components/LandingHero";
+import ContactSection from "../components/ContactSection";
 
 const query = `//groq
   *[_type == "product" && defined(slug.current)]
@@ -20,10 +22,10 @@ function IndexPage(props) {
   });
 
   return (
-    <div className="my-8">
-      <div className="mt-4">
-        <ProductsPage products={products} />
-      </div>
+    <div>
+      <LandingHero />
+      <ProductsPage products={products} />
+      <ContactSection />
     </div>
   );
 }
