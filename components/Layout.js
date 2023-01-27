@@ -87,15 +87,16 @@ function Layout({ children }) {
       <Cart cartOpen={cartOpen} handleOpen={handleOpen} />
       */}
       <main>{children}</main>
-      <footer className="bg-gray-200">
-        <div className="container mx-auto px-6 py-3 flex justify-between items-center">
-          <a
-            href="#"
-            className="text-xl font-bold text-gray-500 hover:text-gray-400"
-          >
-            Pulp Inc.
-          </a>
-          <p className="py-2 text-gray-500 sm:py-0">All rights reserved</p>
+      <footer className="bg-custom-blue flex flex-col items-center justify-center text-center py-5">
+        <a
+          href="mailto:violetkadimitrovab@gmail.com"
+          className="py-2 text-black sm:py-0 underline"
+        >
+          violetkadimitrovab@gmail.com
+        </a>
+        <div className="flex w-10 justify-between">
+          <p className="py-2 text-black sm:py-0">fb</p>
+          <p className="py-2 text-black sm:py-0">in</p>
         </div>
       </footer>
     </div>

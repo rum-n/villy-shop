@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         "accent-1": "#333",
         "custom-gray": "#EDEDED",
+        "custom-gray2": "#F3F3F3",
         "custom-blue": "#E0F3F4",
         "custom-red": "#D5666E",
       },
