@@ -7,7 +7,7 @@ function Layout({ children }) {
   const handleMenu = () => setMenuOpen(!menuOpen);
   const handleOpen = () => setCartOpen(!cartOpen);
   return (
-    <div className="shadow-lg">
+    <div className="shadow-lg font-kannada">
       <header>
         <div className="container mx-auto px-6 py-5 ">
           <div className="flex items-center justify-between  shadow-bottom	">

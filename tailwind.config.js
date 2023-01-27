@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
@@ -21,6 +23,9 @@ module.exports = {
       },
       marginTop: {
         "m-300": "300px",
+      },
+      fontFamily: {
+        kannada: ["Kannada MN", ...defaultTheme.fontFamily.sans],
       },
     },
   },
