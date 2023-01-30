@@ -1,9 +1,6 @@
-import { useRouter } from "next/router";
 import { urlFor } from "../utils/sanity";
 
-function About({ pageData, preview, slug }) {
-  const router = useRouter();
-
+function About() {
   return (
     <div>
       <div className="w-2/4 mx-auto text-center my-16">
