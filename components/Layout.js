@@ -7,7 +7,8 @@ function Layout({ children }) {
   const handleMenu = () => setMenuOpen(!menuOpen);
   // const handleOpen = () => setCartOpen(!cartOpen);
   return (
-    <div className="shadow-lg font-kannada">
+    <div className="min-h-screen shadow-lg font-kannada">
+      {/* <div className=" min-h-screen"> */}
       <header>
         <div className="container mx-auto px-6 py-5 ">
           <div className="flex items-center justify-between  shadow-bottom	">
@@ -87,6 +88,7 @@ function Layout({ children }) {
       <Cart cartOpen={cartOpen} handleOpen={handleOpen} />
       */}
       <main>{children}</main>
+      {/* </div> */}
       <footer className="bg-custom-blue flex flex-col items-center justify-center text-center py-5">
         <a
           href="mailto:violetkadimitrovab@gmail.com"

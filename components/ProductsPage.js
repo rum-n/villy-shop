@@ -2,7 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProductCard from "./ProductCard";
 
-function ProductsPage({ products }) {
+function ProductsPage({ products, preview }) {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -33,14 +33,17 @@ function ProductsPage({ products }) {
         showDots={false}
         responsive={responsive}
         infinite={true}
+        className="w-4/5 mx-auto "
       >
         {products.map((product) => (
           <ProductCard key={product._id} {...product} />
         ))}
       </Carousel>
-      <button className="shadow-lg rounded-3xl my-10 py-2 px-10 bg-custom-red text-white">
-        Shop
-      </button>
+      {preview && (
+        <button className="shadow-lg rounded-3xl my-10 py-2 px-10 bg-custom-red text-white">
+          Shop
+        </button>
+      )}
     </div>
   );
 }

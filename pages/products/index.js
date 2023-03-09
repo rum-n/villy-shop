@@ -17,7 +17,12 @@ function ProductsPageContainer({ productsData, preview }) {
     enabled: preview || router.query.preview !== null,
   });
 
-  return <ProductsPage products={products} />;
+  return (
+    <div>
+      <ProductsPage products={products} />
+      <div className="mb-20"></div>
+    </div>
+  );
 }
 
 export async function getStaticProps({ params = {}, preview = false }) {

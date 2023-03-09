@@ -24,7 +24,7 @@ function IndexPage(props) {
   return (
     <div>
       <LandingHero />
-      <ProductsPage products={products} />
+      <ProductsPage preview products={products} />
       <ContactSection />
     </div>
   );

@@ -4,7 +4,7 @@ function ContactSection({}) {
   return (
     <div className="h-full bg-custom-blue pt-8 pb-40 text-center font-kannada">
       <h3 className="text-2xl font-kannada mb-8">Contact</h3>
-      <div className="absolute inset-x-0 lg:mt-64 sm:mt-12 bg-white mx-auto w-9/12 flex flex-col items-center justify-center z-10 shadow-lg text-center pb-10">
+      <div className="absolute inset-x-0 lg:mt-48 sm:mt-12 bg-white mx-auto w-1/2 flex flex-col items-center justify-center z-10 shadow-lg text-center pb-10">
         <div className="flex flex-col w-full ">
           <div className="flex w-full pt-10">
             <input
@@ -17,7 +17,7 @@ function ContactSection({}) {
             />
           </div>
           <textarea
-            className="h-12 bg-custom-gray2 rounded-sm shadow-inner px-2 mx-10 my-5"
+            className="h-20 bg-custom-gray2 rounded-sm shadow-inner px-2 mx-10 my-5"
             placeholder="Message"
           />
         </div>
