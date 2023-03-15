@@ -33,7 +33,7 @@ function ProductsPage({ products, preview }) {
         showDots={false}
         responsive={responsive}
         infinite={true}
-        className="w-4/5 mx-auto "
+        className="w-4/5 mx-auto"
       >
         {products.map((product) => (
           <ProductCard key={product._id} {...product} />

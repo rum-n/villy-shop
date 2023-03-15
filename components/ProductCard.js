@@ -4,7 +4,7 @@ import { urlFor } from "../utils/sanity";
 function ProductCard({ _id, title, mainImage, slug, defaultProductVariant }) {
   return (
     <Link href={`/products/${slug.current}`}>
-      <div className="border border-black w-4/5 max-w-sm mx-auto rounded-sm">
+      <div className="border border-black w-4/5 max-w-sm mx-auto rounded-sm cursor-pointer">
         <div
           className="flex items-end justify-end h-56 bg-cover"
           style={{

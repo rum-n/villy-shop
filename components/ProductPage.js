@@ -1,25 +1,24 @@
-import {useState} from 'react'
+import { useState } from "react";
 import { urlFor, PortableText, getClient } from "../utils/sanity";
 
 function ProductPage(props) {
-  const [count, setCount] = useState(1)
-  const handleCount = (value) => !(count === 0 && value === -1) ? setCount(count + value) : count
+  const [count, setCount] = useState(1);
+  const handleCount = (value) =>
+    !(count === 0 && value === -1) ? setCount(count + value) : count;
   const { title, defaultProductVariant, mainImage, body } = props;
   return (
-    <div className="container mx-auto px-6">
-      <div className="md:flex md:items-center">
-        <div className="w-full h-64 md:w-1/2 lg:h-96">
-          <img
-            className="h-full w-full rounded-md object-cover max-w-lg mx-auto"
-            src={urlFor(mainImage)
-              .auto("format")
-              .width(1051)
-              .fit("crop")
-              .quality(80)}
-            alt={mainImage?.alt || `Photo of ${title}`}
-          />
-        </div>
-        <div className="w-full max-w-lg mx-auto mt-5 md:ml-8 md:mt-0 md:w-1/2">
+    <div className="mx-auto px-6 bg-custom-gray2">
+      <div className="md:flex">
+        <img
+          className="h-full object-cover max-w-lg mx-auto border border-black"
+          src={urlFor(mainImage)
+            .auto("format")
+            .width(1051)
+            .fit("crop")
+            .quality(80)}
+          alt={mainImage?.alt || `Photo of ${title}`}
+        />
+        <div className="w-full max-w-lg mx-auto mt-5 md:ml-8 md:mt-0 md:w-1/2 border border-black">
           <h3 className="text-gray-700 uppercase text-lg">{title}</h3>
           <span className="text-gray-500 mt-3">
             ${defaultProductVariant?.price}
@@ -30,7 +29,10 @@ function ProductPage(props) {
               Count:
             </label>
             <div className="flex items-center mt-1">
-              <button onClick={() => handleCount(1)}className="text-gray-500 focus:outline-none focus:text-gray-600">
+              <button
+                onClick={() => handleCount(1)}
+                className="text-gray-500 focus:outline-none focus:text-gray-600"
+              >
                 <svg
                   className="h-5 w-5"
                   fill="none"
@@ -44,7 +46,10 @@ function ProductPage(props) {
                 </svg>
               </button>
               <span className="text-gray-700 text-lg mx-2">{count}</span>
-              <button onClick={() => handleCount(-1)} className="text-gray-500 focus:outline-none focus:text-gray-600">
+              <button
+                onClick={() => handleCount(-1)}
+                className="text-gray-500 focus:outline-none focus:text-gray-600"
+              >
                 <svg
                   className="h-5 w-5"
                   fill="none"
@@ -79,10 +84,10 @@ function ProductPage(props) {
           </div>
         </div>
       </div>
-      <div className="mt-16 md:w-2/3">
+      {/* <div className="mt-16 md:w-2/3">
         <h3 className="text-gray-600 text-2xl font-medium">Description</h3>
         {body && <PortableText blocks={body?.en} className="text-gray-600" />}
-      </div>
+      </div> */}
     </div>
   );
 }
